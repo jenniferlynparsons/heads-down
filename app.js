@@ -14,7 +14,7 @@
 
   const STORE_KEY = 'pomozine:v1';
   const FOCUS_OPTS = [10, 15, 20];
-  const BREAK_OPTS = [10, 20];
+  const BREAK_OPTS = [5, 10, 20];
   const ENDLESS_CYCLES = 30;      // "open-ended" = up to 30 cycles (10+ hours)
   const SCHEDULE_AHEAD = 24;      // phases of audio scheduled at once
 

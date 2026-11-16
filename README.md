@@ -34,7 +34,7 @@ A cut-and-paste pomodoro timer with background sounds. Plain HTML, CSS, and Java
 ### 2. Pick your lengths
 
 - **Focus:** 10, 15, or 20 minutes
-- **Break:** 10 or 20 minutes
+- **Break:** 5, 10, or 20 minutes
 
 Every break is the same length. There's no long break after a set number of cycles.
 
