@@ -1,5 +1,5 @@
 /* ==========================================================
-   POMOZINE SOUND TOOLKIT
+   HEADS DOWN SOUND TOOLKIT
    Load this before any sound file. It sets up the list that
    sound files add themselves to, plus a few shared helpers.
 
@@ -56,7 +56,7 @@
    "Happens about N times per second" ... count = Math.floor(seconds * N), put each at a random spot
    ========================================================== */
 
-window.Pomozine = {
+window.HeadsDown = {
   noises: [],
   bells: [],
 

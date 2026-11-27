@@ -12,7 +12,7 @@
      - sharp clicks sound brittle; smoothing them makes them warmer
    ========================================================== */
 
-Pomozine.addNoise({
+HeadsDown.addNoise({
   id: 'fire',
   label: 'fireplace',
   seconds: 45,            // long, so the big pops don't repeat on a noticeable cycle

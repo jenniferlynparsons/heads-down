@@ -1,5 +1,5 @@
 /* ==========================================================
-   POMOZINE — photocopied cut-and-paste zine styles
+   HEADS DOWN — photocopied cut-and-paste zine styles
    One spot color (hot pink). Everything else is toner + paper.
    ========================================================== */
 
@@ -55,26 +55,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4px;
+  gap: 6px 22px;            /* row gap / space between the two words */
   font-weight: normal;
   line-height: 1;
 }
+.ransom .word { display: flex; gap: 4px; }
 
-.ransom span {
+.ransom .word > span {
   display: inline-block;
   padding: .08em .14em .02em;
-  font-size: clamp(2.6rem, 9vw, 5rem);
+  font-size: clamp(2.2rem, 8vw, 4.6rem);
   box-shadow: 2px 3px 0 rgba(0,0,0,.25);
 }
-/* each letter "cut from a different magazine" */
-.ransom span:nth-child(1) { font-family: var(--f-display); background: var(--ink); color: var(--paper-2); transform: rotate(-4deg); }
-.ransom span:nth-child(2) { font-family: var(--f-type); background: var(--paper-2); transform: rotate(3deg) translateY(4px); border: 2px solid var(--ink); }
-.ransom span:nth-child(3) { font-family: var(--f-marker); background: var(--pink); color: var(--ink); transform: rotate(-2deg); }
-.ransom span:nth-child(4) { font-family: Georgia, "Times New Roman", serif; font-style: italic; background: var(--paper-2); transform: rotate(5deg) translateY(-3px); }
-.ransom span:nth-child(5) { font-family: var(--f-display); background: var(--paper-2); color: var(--ink); transform: rotate(-6deg); border: 3px dashed var(--ink); }
-.ransom span:nth-child(6) { font-family: var(--f-type); background: var(--ink); color: var(--pink); transform: rotate(2deg) translateY(5px); }
-.ransom span:nth-child(7) { font-family: "Arial Black", var(--f-display); background: var(--paper-2); background-image: var(--halftone); background-size: 5px 5px; transform: rotate(-3deg); }
-.ransom span:nth-child(8) { font-family: var(--f-marker); background: var(--ink); color: var(--paper-2); transform: rotate(4deg) translateY(-2px); }
+/* each letter "cut from a different magazine" (r1-r8 are set in index.html) */
+.ransom .r1 { font-family: var(--f-display); background: var(--ink); color: var(--paper-2); transform: rotate(-4deg); }
+.ransom .r2 { font-family: var(--f-type); background: var(--paper-2); transform: rotate(3deg) translateY(4px); border: 2px solid var(--ink); }
+.ransom .r3 { font-family: var(--f-marker); background: var(--pink); color: var(--ink); transform: rotate(-2deg); }
+.ransom .r4 { font-family: Georgia, "Times New Roman", serif; font-style: italic; background: var(--paper-2); transform: rotate(5deg) translateY(-3px); }
+.ransom .r5 { font-family: var(--f-display); background: var(--paper-2); color: var(--ink); transform: rotate(-6deg); border: 3px dashed var(--ink); }
+.ransom .r6 { font-family: var(--f-type); background: var(--ink); color: var(--pink); transform: rotate(2deg) translateY(5px); }
+.ransom .r7 { font-family: "Arial Black", var(--f-display); background: var(--paper-2); background-image: var(--halftone); background-size: 5px 5px; transform: rotate(-3deg); }
+.ransom .r8 { font-family: var(--f-marker); background: var(--ink); color: var(--paper-2); transform: rotate(4deg) translateY(-2px); }
 
 .issue {
   display: inline-block;

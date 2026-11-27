@@ -1,8 +1,8 @@
-# pomozine
+# Heads Down
 
-A cut-and-paste pomodoro timer with background sounds. Plain HTML, CSS, and JavaScript. No accounts, no tracking, no build step, no audio files.
+A focus timer with background sounds, made to look like a photocopied zine. Plain HTML, CSS, and JavaScript. No accounts, no tracking, no build step, no audio files.
 
-[Demo](https://jenniferlynparsons.github.io/pomozine/)
+[Demo](https://jenniferlynparsons.github.io/heads-down/)
 
 
 ---
@@ -107,7 +107,7 @@ Things to know:
 Upload the whole folder to any static host (GitHub Pages, Netlify, Neocities, your own server). Keep the files together:
 
 ```
-pomozine/
+heads-down/
 ├── index.html
 ├── style.css
 ├── app.js

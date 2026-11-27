@@ -9,7 +9,7 @@
    tone(pitchHz, loudness, ringSeconds, startTime)
    ========================================================== */
 
-Pomozine.addBell({
+HeadsDown.addBell({
   id: 'bowl',
   label: 'singing bowl',
 

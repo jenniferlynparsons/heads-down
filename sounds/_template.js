@@ -11,7 +11,7 @@
    every ~8 seconds. It's not loaded by default.
    ========================================================== */
 
-Pomozine.addNoise({
+HeadsDown.addNoise({
   id: 'ocean',          // short, no spaces, unique
   label: 'ocean',       // button text
   seconds: 24,          // loop length (a multiple of the swell keeps it smooth)

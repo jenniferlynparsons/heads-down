@@ -8,7 +8,7 @@
    tone(pitchHz, loudness, ringSeconds, startTime)
    ========================================================== */
 
-Pomozine.addBell({
+HeadsDown.addBell({
   id: 'chime',
   label: 'bright chime',
 

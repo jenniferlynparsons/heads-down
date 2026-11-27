@@ -11,7 +11,7 @@
    like a tape deck on the desk.
    ========================================================== */
 
-Pomozine.addNoise({
+HeadsDown.addNoise({
   id: 'tape',
   label: 'mixtape hiss',
   seconds: 30,

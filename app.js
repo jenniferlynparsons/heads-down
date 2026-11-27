@@ -1,5 +1,5 @@
 /* ==========================================================
-   POMOZINE — vanilla JS pomodoro timer
+   HEADS DOWN — vanilla JS focus timer
    - All sounds are synthesized with the Web Audio API (no files).
    - Bells and ambient noise are scheduled on the audio clock, so they
      stay on time even when the tab is in the background.
@@ -12,7 +12,8 @@
 
   /* ---------------- settings ---------------- */
 
-  const STORE_KEY = 'pomozine:v1';
+  const STORE_KEY = 'headsdown:v1';
+  const OLD_STORE_KEY = 'pomozine:v1';   // settings saved before the rename
   const FOCUS_OPTS = [10, 15, 20];
   const BREAK_OPTS = [5, 10, 20];
   const ENDLESS_CYCLES = 30;      // "open-ended" = up to 30 cycles (10+ hours)
@@ -26,13 +27,13 @@
   function load() {
     let s = { ...DEFAULTS };
     try {
-      const raw = localStorage.getItem(STORE_KEY);
+      const raw = localStorage.getItem(STORE_KEY) || localStorage.getItem(OLD_STORE_KEY);
       if (raw) s = { ...s, ...JSON.parse(raw) };
     } catch (e) { /* storage blocked: use defaults */ }
     if (!FOCUS_OPTS.includes(+s.focus)) s.focus = DEFAULTS.focus;
     if (!BREAK_OPTS.includes(+s.brk)) s.brk = DEFAULTS.brk;
     // sounds come from sounds/*.js; fall back if a saved one was removed
-    const reg = window.Pomozine || { noises: [], bells: [] };
+    const reg = window.HeadsDown || { noises: [], bells: [] };
     if (!reg.noises.some((n) => n.id === s.noise)) s.noise = reg.noises[0] ? reg.noises[0].id : DEFAULTS.noise;
     if (!reg.bells.some((b) => b.id === s.bell)) s.bell = reg.bells[0] ? reg.bells[0].id : DEFAULTS.bell;
     s.focus = +s.focus; s.brk = +s.brk;
@@ -78,8 +79,8 @@
   const clearSchedule = () => killNodes(scheduled);
   const clearPreview = () => killNodes(preview);
 
-  // The sounds themselves live in sounds/*.js and register on window.Pomozine.
-  const SOUNDS = window.Pomozine || { noises: [], bells: [], tools: {} };
+  // The sounds themselves live in sounds/*.js and register on window.HeadsDown.
+  const SOUNDS = window.HeadsDown || { noises: [], bells: [], tools: {} };
   const noiseById = (id) => SOUNDS.noises.find((n) => n.id === id) || SOUNDS.noises[0];
   const bellById = (id) => SOUNDS.bells.find((b) => b.id === id) || SOUNDS.bells[0];
 
@@ -364,7 +365,7 @@
 
   function notify(title, body) {
     if (!settings.notify || !('Notification' in window) || Notification.permission !== 'granted') return;
-    try { new Notification(`pomozine: ${title}`, { body, tag: 'pomozine', silent: true }); } catch (e) { /* ignore */ }
+    try { new Notification(`Heads Down: ${title}`, { body, tag: 'headsdown', silent: true }); } catch (e) { /* ignore */ }
   }
 
   /* ---------------- rendering ---------------- */
@@ -458,8 +459,8 @@
     el.hearNoise.disabled = active;
 
     // tab title
-    document.title = active ? `${mmss(ms)} ${s === 'paused' ? 'PAUSED' : p.type.toUpperCase()} · pomozine`
-      : s === 'done' ? 'done! · pomozine' : 'pomozine';
+    document.title = active ? `${mmss(ms)} ${s === 'paused' ? 'PAUSED' : p.type.toUpperCase()} · Heads Down`
+      : s === 'done' ? 'done! · Heads Down' : 'Heads Down';
 
     // progress fill on the current strip block
     const cur = el.strip.querySelector('.blk.now .fill');

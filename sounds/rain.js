@@ -8,7 +8,7 @@
      3. a few bigger, rounder drips (gutter, leaves, windowsill)
    ========================================================== */
 
-Pomozine.addNoise({
+HeadsDown.addNoise({
   id: 'rain',
   label: 'rain',
   seconds: 16,

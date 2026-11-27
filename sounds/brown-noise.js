@@ -7,7 +7,7 @@
    so it sounds deep and soft, like a distant waterfall.
    ========================================================== */
 
-Pomozine.addNoise({
+HeadsDown.addNoise({
   id: 'brown',            // saved in settings; don't change once people use it
   label: 'brown noise',   // what the button says
   seconds: 14,            // length of the loop
